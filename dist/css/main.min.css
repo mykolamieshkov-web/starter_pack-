@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* Обнуление стилей */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a {
+  text-decoration: unset;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  all: initial;
+}
+
+nav {
+  display: flex;
+}
+
+:root {
+  --transition: all 200ms ease;
+}
+
+body, html {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.container {
+  max-width: 0px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+  }
+}
+
+.btn {
+  max-width: 180px;
+  min-height: 42px;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+  color: var(--white);
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 400;
+  letter-spacing: 0;
+  border-radius: 18px;
+  transition: var(--transition);
+}
+@media (hover: hover) {
+  .btn:hover {
+    color: var(--hover);
+  }
+}
+@media (hover: none) {
+  .btn:active {
+    color: var(--hover);
+  }
+}
+
+.bg {
+  position: absolute; /* Чтобы изображение было фоном */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Изображение на заднем плане */
+}
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Делаем изображение полностью покрывающим блок */
+  object-position: top; /* Центрируем изображение */
+}
+
+.footer {
+  width: 100%;
+  height: 45px;
+  background-color: orange;
+}
+/*# sourceMappingURL=main.min.css.map */
